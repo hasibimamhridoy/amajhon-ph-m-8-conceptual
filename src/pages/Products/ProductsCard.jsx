@@ -46,7 +46,7 @@ const ProductCard = ({ product }) => {
                 <HeartIcon className="h-5 w-5 text-blue-500 cursor-pointer"></HeartIcon>
 
                 {/* //show Details */}
-                <Link to={`/products/${id}`}>
+                <Link to={`/products/${id}`} state={title}>
                   <ArrowRightCircleIcon className="h-6 w-6 cursor-pointer"></ArrowRightCircleIcon>
                  
                 </Link>
