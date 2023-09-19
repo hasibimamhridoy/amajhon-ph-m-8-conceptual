@@ -1,8 +1,24 @@
-import { useLoaderData } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useLoaderData, useParams } from "react-router-dom";
 
 const Product = () => {
   const productDetails = useLoaderData();
   const { brand, description, price, title, thumbnail } = productDetails;
+
+  // const params = useParams()
+  // console.log(params);
+
+  // const [productData,setProductData] = useState()
+  
+  // useEffect(()=>{
+
+  //   fetch(`https://dummyjson.com/products/${params?.id}`)
+  //   .then(res=>res.json())
+  //   .then(data=>setProductData(data))
+
+  // },[params?.id])
+
+  // console.log("products data",productData);
 
   return (
     <div className="px-5 mx-auto w-full">

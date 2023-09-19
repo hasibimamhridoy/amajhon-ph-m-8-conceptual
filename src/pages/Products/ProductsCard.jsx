@@ -1,9 +1,19 @@
 import React from "react";
 import { ArrowRightCircleIcon, HeartIcon } from "@heroicons/react/24/solid";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
   const { id, images, price, stock, title } = product || {};
+
+  const navigate = useNavigate()
+
+  // const handleUserVerified = ()=>{
+
+  //   const user = false
+
+  //   user ? navigate(`/products/${id}`) : navigate('/')
+
+  // }
 
   return (
     <div>
@@ -38,7 +48,13 @@ const ProductCard = ({ product }) => {
                 {/* //show Details */}
                 <Link to={`/products/${id}`}>
                   <ArrowRightCircleIcon className="h-6 w-6 cursor-pointer"></ArrowRightCircleIcon>
+                 
                 </Link>
+
+                {/* <div onClick={handleUserVerified}>
+                  <ArrowRightCircleIcon className="h-6 w-6 cursor-pointer"></ArrowRightCircleIcon>
+                 
+                </div> */}
               </div>
             </div>
           </div>
